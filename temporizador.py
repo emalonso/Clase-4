@@ -18,9 +18,16 @@ class Temporizador:
             if self.m.valor==self.m.tope:
                 self.h.retroceder()
                 
+
+    def avanzar (self):
+        self.s.avanzar()
+        if self.s.valor==0:
+            self.m.avanzar()
+            if self.m.valor==0:
+                self.h.avanzar()
+                
     def reiniciar (self,valor_usuario):
         self.h.reiniciar  (valor_usuario[0])
         self.m.reiniciar (valor_usuario[1])
         self.s.reiniciar (valor_usuario[2])
         
-
